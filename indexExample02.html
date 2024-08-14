@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linea de tiempos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .menu-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <header class="bg-slate-300 border border-red-700 h-[130px] flex justify-between items-center px-4">
+        <h1 class="relative text-2xl font-serif font-bold">Linea de tiempo MAC y Windows</h1>
+        <button id="menu-toggle" class="md:hidden p-2 border rounded">
+            <span class="block w-6 h-1 bg-black mb-1"></span>
+            <span class="block w-6 h-1 bg-black mb-1"></span>
+            <span class="block w-6 h-1 bg-black"></span>
+        </button>
+    </header>
+
+    <section id="menu" class="menu-hidden fixed top-0 left-0 w-full h-full bg-slate-300 border-r border-red-700 md:relative md:w-auto md:h-auto md:bg-transparent md:border-none transition-transform duration-300">
+        <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
+        <ul class="mt-16 space-y-4 text-center md:mt-0 md:flex md:space-y-0 md:space-x-4">
+            <li><a href="#" id="mac-link" class="text-xl font-semibold">MAC</a></li>
+            <li><a href="#" id="windows-link" class="text-xl font-semibold">Windows</a></li>
+        </ul>
+    </section>
+
+    <section id="content" class="p-4 border border-red-700 bg-slate-700 flex flex-wrap">
+        <div id="mac-section" class="hidden">
+            <div class="border border-red-600 bg-slate-300 m-1 h-[600px] w-[1040px] rounded-xl overflow-auto">
+                <h1 class="text-center my-5 text-xl font-serif font-bold">Linea de tiempo Apple Mac</h1>
+                <div class="border-2 shadow-sm overflow-auto my-4">
+                    <table class="border-collapse table-auto w-full text-sm">
+                        <thead class="bg-indigo-800">
+                            <tr>
+                                <th class="border-b font-medium p-4 pl-8 pt-3 pb-3 text-slate-100 text-left">Nombre</th>
+                                <th class="border-b font-medium p-4 pt-3 pb-3 text-slate-100 text-left">Version</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Version Kernel</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Año Lanzamiento</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Procesador</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Velocidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Arquitectura</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Numero de Hilos</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Tipo</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Capacidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Frecuencia (Velocidad)</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Novedades del Hardware</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Novedades del Software</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Foto Escritorio</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white/80">
+                            <!-- Agrega aquí las filas de la tabla para la sección de MAC -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="windows-section" class="hidden">
+            <div class="border border-red-600 bg-slate-300 m-1 h-[600px] w-[1040px] rounded-xl overflow-auto">
+                <h1 class="text-center my-5 text-xl font-serif font-bold">Linea de tiempo Windows</h1>
+                <div class="border-2 shadow-sm overflow-auto my-4">
+                    <table class="border-collapse table-auto w-full text-sm">
+                        <thead class="bg-indigo-800">
+                            <tr>
+                                <th class="border-b font-medium p-4 pl-8 pt-3 pb-3 text-slate-100 text-left">Nombre</th>
+                                <th class="border-b font-medium p-4 pt-3 pb-3 text-slate-100 text-left">Version</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Version Kernel</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Año Lanzamiento</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Procesador</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Velocidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Arquitectura</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Numero de Hilos</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Tipo</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Capacidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Frecuencia (Velocidad)</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Novedades del Hardware</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Novedades del Software</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Foto Escritorio</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white/80">
+                            <!-- Agrega aquí las filas de la tabla para la sección de Windows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border border-red-700 h-[300px] bg-slate-700 text-center ">
+        <img src="images/Logo_Jeferson.png" class="mx-auto h-10 mb-4 my-8" alt="">
+        <p class="relative text-gray-50 text-lg tracking-widest font-serif font-normal text-center">Jeferson Mauricio Hernandez Ladino</p>
+        <p class="text-gray-50 text-sm tracking-widest font-serif font-normal text-center">ADSO - 14/08/2024</p>
+        <img src="images/Logos-Redes.png" class="mx-auto h-9 mt-5" alt="">
+        <p class="relative top-8 text-gray-50 font-serif font-normal text-center">Derechos Reservados &copy; 2024</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            if (menu.classList.contains('menu-hidden')) {
+                menu.classList.remove('menu-hidden');
+            } else {
+                menu.classList.add('menu-hidden');
+            }
+        });
+
+        document.getElementById('mac-link').addEventListener('click', function() {
+            document.getElementById('mac-section').classList.remove('hidden');
+            document.getElementById('windows-section').classList.add('hidden');
+        });
+
+        document.getElementById('windows-link').addEventListener('click', function() {
+            document.getElementById('windows-section').classList.remove('hidden');
+            document.getElementById('mac-section').classList.add('hidden');
+        });
+
+        document.getElementById('close-button').addEventListener('click', function() {
+            document.getElementById('menu').classList.add('menu-hidden');
+        });
+    </script>
+</body>
+</html>
