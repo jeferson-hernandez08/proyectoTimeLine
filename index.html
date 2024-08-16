@@ -15,16 +15,16 @@
         </style>
     </head>
     <body>
-        <header class="bg-slate-300 border border-red-700 h-[130px] flex justify-between items-center px-4">
-            <button id="menu-toggle" class="mx-14 p-2 border rounded">
+        <header class="bg-slate-300 h-[130px] flex justify-between items-center px-4">
+            <button id="menu-toggle" class="mx-14 p-2 border-2 border-blue-800 rounded">
                 <span class="block w-6 h-1 bg-black mb-1"></span>
                 <span class="block w-6 h-1 bg-black mb-1"></span>
                 <span class="block w-6 h-1 bg-black"></span>
             </button>
             <h1 class=" text-2xl font-serif font-bold">Linea de tiempo MAC Y WINDOWS</h1>
             <div class="flex items-center">
-                <img src="images/Logo_Jeferson.png" class="border border-red-700 h-8"  alt="">
-                <img src="images/foto_jefer.png" class="rounded-full bg-slate-600 border-4 h-32 w-32 ml-4 object-contain" alt="">
+                <img src="images/Logo_Jeferson.png" class="h-8"  alt=""> <!-- border border-red-700 -->
+                <img src="images/foto_jefer.png" class="rounded-full bg-slate-600 border-4 border-blue-800 h-32 w-32 ml-4 object-contain" alt="">
             </div>
             <button id="menu-button" class="md:hidden text-2xl">
                 &#9776; <!-- Símbolo de hamburguesa -->
@@ -32,7 +32,7 @@
         </header>
         <section id="content" class="p-4 border border-red-700 h-auto bg-slate-700 flex flex-wrap">
             <div id="menu" class="menu-hidden border border-red-600 bg-slate-300 h-[600px] w-[250px] rounded-xl m-auto">
-                <nav id="menu" class="border border-red-700">
+                <nav id="menu" class="">
                     <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
                     
                         <li class="mx-5 mt-5">
@@ -55,107 +55,377 @@
                         <table class="border-2  border-red-600 m-5 border-collapse table-auto w-full text-sm">
                         <thead class="bg-indigo-800">
                             <tr>
-                                <th class="border-b font-medium p-4 pl-8 pt-3 pb-3 text-slate-100 text-left ">Nombre</th>
-                                <th class="border-b font-medium p-4 pt-3 pb-3 text-slate-100 text-left">Version</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">version Kernel</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Año Lanzamiento</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Procesador</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Velocidad</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Arquitectura</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Numero de Hilos</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Tipo</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Capacidad</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Frecuencia (Velocidad)</th>
-                                <th class="border-b font-medium px-48 pt-3 pb-3 text-slate-100 text-center">Novedades del Hardware</th>  <!-- Se le pone padding x 48 para que quede mas amplio para poner el texto -->
-                                <th class="border-b font-medium px-48 pt-3 pb-3 text-slate-100 text-center">Novedades del Software</th>  <!-- Se le pone padding x 48 para que quede mas amplio para poner el texto -->
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Foto Escritorio</th>
+                                <th class="border-b font-medium p-4 pl-8 pt-3 pb-3 text-slate-100 text-center ">Nombre</th>
+                                <th class="border-b font-medium p-4 pt-3 pb-3 text-slate-100 text-center">Version</th>
+                                <th class="border-b font-medium px-32 pt-3 pb-3 text-slate-100 text-center">Version Kernel</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Año Lanzamiento</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Procesador</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Velocidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Arquitectura</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Numero de Hilos</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Tipo</th>
+                                <th class="border-b font-medium px-32 pt-3 pb-3 text-slate-100 text-center">Capacidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Frecuencia (Velocidad)</th>  <!-- Aqui en el th es donde se organiza todo el grandon de los contenidos de la tabla con padding -->
+                                <th class="border-b font-medium px-52 pt-3 pb-3 text-slate-100 text-center">Novedades del Hardware</th>  <!-- Se le pone padding x 48 para que quede mas amplio para poner el texto -->
+                                <th class="border-b font-medium px-52 pt-3 pb-3 text-slate-100 text-center">Novedades del Software</th>  <!-- Se le pone padding x 48 para que quede mas amplio para poner el texto -->
+                                <th class="border-b font-medium px-48 pt-3 pb-3 text-slate-100 text-center">Foto Escritorio</th>         <!-- Se le pone padding x 48 para que quede mas amplio la imagen de escritorio -->
                             </tr>
                         </thead>
                         <tbody class="bg-white/80">
                             <tr>
-                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800">Sistem 1 </td>
-                                <td class="border-b border-indigo-500 p-4 text-indigo-800">1.0</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1984</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Motorola 6800</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">8 Mhz.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">16 bits con una arquitectura interna de 32 bits.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 hilo </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Estandar</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">128 KB</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No Aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Primera versión del Macintosh con interfaz gráfica de usuario (GUI),  Incorporación del Motorola 68000 como procesador Y Ram de 128KB sin frecuencia como las modernas.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Primera interfaz gráfica de usuario en una computadora personal, con ventanas, iconos y menús, No soportaba multitarea; sólo un programa podía estar activo a la vez Y Incluía el Finder, que permitía al usuario gestionar archivos y aplicaciones a través de una interfaz gráfica.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">
-                                    <img src="images/mac_1.png" class="" alt="">
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Sistem 1 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">1.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>      <!-- text-center: Para centrar texto -->
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1984</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Motorola 6800</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8 Mhz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">16 bits con una arquitectura interna de 32 bits.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Estandar</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">128 KB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No Aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Primera versión del Macintosh con interfaz gráfica de usuario (GUI),  Incorporación del Motorola 68000 
+                                    como procesador Y Ram de 128KB sin frecuencia como las modernas.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Primera interfaz gráfica de usuario en una computadora personal, con ventanas, iconos y menús, 
+                                    No soportaba multitarea; sólo un programa podía estar activo a la vez Y Incluía el Finder, que permitía
+                                    al usuario gestionar archivos y aplicaciones a través de una interfaz gráfica.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesMac/image1.png" class="" alt="">
                                 </td>
                             </tr>
                             <tr>
-                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800">Sistem 2 </td>
-                                <td class="border-b border-indigo-500 p-4 text-indigo-800">2.0</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1985</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Motorola 6800</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">8 Mhz.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">16 bits con una arquitectura interna de 32 bits.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 hilo </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Estandar</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 MB (1024 KB) - Con la capacidad de expandirse hasta 4 MB</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No Aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No hubo cambios significativos en el hardware comparado con System 1. Los Macintosh de esa época seguían usando el Motorola 68000 a 8 MHz - Su unico cambio fue en su memoria ram </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Mejoras en la interfaz gráfica de usuario y soporte para nuevas aplicaciones.
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Sistem 2 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">2.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1985</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Motorola 6800</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8 Mhz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">16 bits con una arquitectura interna de 32 bits.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Estandar</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 MB (1024 KB) - Con la capacidad de expandirse hasta 4 MB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No Aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    No hubo cambios significativos en el hardware comparado con System 1. Los Macintosh de esa época 
+                                    seguían usando el Motorola 68000 a 8 MHz - Su unico cambio fue en su memoria ram
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">
+                                    Mejoras en la interfaz gráfica de usuario y soporte para nuevas aplicaciones.
                                     Introducción de nuevas funciones y mejoras en el Finder.
                                     Mejoras en la gestión de archivos y el sistema de iconos.
                                     Soporte ampliado para aplicaciones en términos de funcionalidad y estabilidad.
                                 </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">
-                                    <img src="images/mac_1.png" class="" alt="">
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesMac/image2.png" class="" alt="">
                                 </td>
                             </tr>
                             <tr>
-                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800">Sistem 3 </td>
-                                <td class="border-b border-indigo-500 p-4 text-indigo-800">3.0</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1985</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Motorola 6800</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">8 Mhz.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">16 bits con una arquitectura interna de 32 bits.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 hilo </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Estandar</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 MB (1024 KB) - Con la capacidad de expandirse hasta 4 MB</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No Aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No hubo cambios significativos en el hardware del Macintosh relacionado específicamente con System 3. Los Macintosh seguían utilizando el procesador Motorola 68000 a 8 MHz y su memoria ram era la misma del system 2</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 overflow-auto">Introducción de un nuevo sistema de ventanas, que mejoró la gestión de la interfaz gráfica.
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Sistem 3 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">3.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1985</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Motorola 6800</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8 Mhz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">16 bits con una arquitectura interna de 32 bits.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Estandar</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 MB (1024 KB) - Con la capacidad de expandirse hasta 4 MB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No Aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    No hubo cambios significativos en el hardware del Macintosh relacionado específicamente con System 3.
+                                    Los Macintosh seguían utilizando el procesador Motorola 68000 a 8 MHz y su memoria ram era la misma 
+                                    del system 2
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Introducción de un nuevo sistema de ventanas, que mejoró la gestión de la interfaz gráfica.
                                     Implementación de mejoras en el Finder, proporcionando una experiencia de usuario más fluida.
                                     Introducción del concepto de "folders" o carpetas, lo que facilitó la organización de archivos.
                                     Mejoras en la gestión de impresoras y la impresión desde aplicaciones.
                                     Incorporación de nuevas características para aplicaciones, facilitando la integración de software adicional.
                                 </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">
-                                    <img src="images/mac_3.png" class="" alt="">
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesMac/image3.png" class="" alt="">
                                 </td>
                             </tr>
                             <tr>
-                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800">Sistem 4 </td>
-                                <td class="border-b border-indigo-500 p-4 text-indigo-800">4.0 -Terminar aqui</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1985</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Motorola 6800</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">8 Mhz.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">16 bits con una arquitectura interna de 32 bits.</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 hilo </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Estandar</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 MB (1024 KB) - Con la capacidad de expandirse hasta 4 MB</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No Aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No hubo cambios significativos en el hardware del Macintosh relacionado específicamente con System 3. Los Macintosh seguían utilizando el procesador Motorola 68000 a 8 MHz y su memoria ram era la misma del system 2</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Introducción de un nuevo sistema de ventanas, que mejoró la gestión de la interfaz gráfica.
-                                    Implementación de mejoras en el Finder, proporcionando una experiencia de usuario más fluida.
-                                    Introducción del concepto de "folders" o carpetas, lo que facilitó la organización de archivos.
-                                    Mejoras en la gestión de impresoras y la impresión desde aplicaciones.
-                                    Incorporación de nuevas características para aplicaciones, facilitando la integración de software adicional.
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Sistem 4 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">4.0 </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1987</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Motorola 6800</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8 Mhz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">16 bits con una arquitectura interna de 32 bits.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Estandar</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Macintosh SE: 512 KB - Capacidad Máxima4 MB           
+                                    Macintosh Plus:
+                                    1 MB - Capacidad Máxima: 4 MB
                                 </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">
-                                    <img src="images/mac_3.png" class="" alt="">
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No Aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    No se introdujo hardware nuevo específico para System 4. Los Macintosh que ejecutaban System 4 
+                                    seguían utilizando el procesador Motorola 68000 a 8 MHz, sin cambios significativos en el hardware.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Introducción de soporte para nuevas configuraciones de Macintosh, incluyendo modelos como el Macintosh SE y el Macintosh Plus.
+                                    Mejoras en el Finder, incluyendo una interfaz más refinada y mejoras en la funcionalidad de gestión de archivos.
+                                    Mejoras en la gestión de impresoras y opciones de impresión.
+                                    Incorporación de soporte para aplicaciones más avanzadas, proporcionando una experiencia de usuario más rica.
+                                    Introducción de nuevas características en el sistema de ventanas, facilitando una mejor organización y manejo de las aplicaciones abiertas.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesMac/image4.png" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Sistem 6 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">6.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1988</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Motorola 6800</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Macintosh SE y Macintosh - 8 MHz
+                                    Macintosh II - 16 MHz
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">16 bits con una arquitectura interna de 32 bits.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Estandar</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Macintosh SE y Macintosh : 1 MB - Capacidad Máxima 4 MB
+                                    Macintosh II: 1 MB - Capacidad Máxima 8 MB
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No Aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Los Macintosh que ejecutaban System 6 seguían utilizando el procesador Motorola 68000 a 8 MHz y capacidad maxima 
+                                    de ram de 1 MB a 8 MB maximo
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Introducción del soporte para el "MultiFinder," que permitía una forma básica de multitarea cooperativa, permitiendo a los usuarios ejecutar múltiples aplicaciones simultáneamente (aunque con limitaciones).
+                                    Mejoras en el Finder, incluyendo un soporte mejorado para la organización de archivos y carpetas, así como una interfaz más eficiente y amigable.
+                                    Introducción de un sistema de administración de memoria mejorado, proporcionando una mejor gestión de la memoria del sistema.
+                                    Soporte para nuevos dispositivos periféricos y mejoras en la impresión y la conectividad.
+                                    Incorporación de herramientas y utilidades adicionales, como el "Chooser" para la selección de impresoras y otros dispositivos.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesMac/image5.png" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Sistem 7 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">7.0 (con actualizaciones posteriores como 7.1, 7.5, 7.6)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1991</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Motorola 68000, Motorola 68020, Motorola 68030, y Motorola 68040 (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8 MHz, 16 MHz, 20 MHz, o 25 MHz (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">16-bit (para los modelos basados en 68000 y 68020) y 32-bit (para los modelos basados en 68030 y 68040)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Estandar</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Macintosh Classic II:
+                                    Memoria Estándar: 1 MB
+                                    Capacidad Máxima: 10 MB
+
+                                    Macintosh IIsi:
+                                    Memoria Estándar: 1 MB
+                                    Capacidad Máxima: 20 MB
+
+                                    Macintosh LC:
+                                    Memoria Estándar: 2 MB
+                                    Capacidad Máxima: 10 MB
+
+                                    Macintosh Quadra:
+                                    Memoria Estándar: 4 MB
+                                    Capacidad Máxima: 128 MB
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">60 MHz a 100 MHz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Compatibilidad con nuevos modelos de Macintosh:
+                                    Macintosh LC, Macintosh Quadra, Macintosh IIsi, y PowerBook.
+                                    Soporte para procesadores más avanzados:
+                                    Compatibilidad con el Motorola 68030 y el Motorola 68040 en modelos más recientes - Ademas con mejoras en el procesador y memoria ram con su respectiva freceuncia</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Multitarea Mejorada:
+                                    Integración del MultiFinder para la multitarea cooperativa, permitiendo ejecutar múltiples aplicaciones simultáneamente de manera más eficiente.
+                                    Mejoras en la Interfaz Gráfica:
+                                    Nueva apariencia más moderna con mejoras en la gestión de ventanas, iconos, y controles.
+                                    Soporte para Memoria Virtual:
+                                    Permite utilizar la memoria virtual para aplicaciones más grandes y una gestión más eficiente de la RAM.
+                                    Mejoras en el Finder:
+                                    Mejoras en la administración de archivos y carpetas, incluyendo una interfaz de usuario más intuitiva y características adicionales para la búsqueda y organización de documentos.
+                                    Control Panel:
+                                    Introducción del "Control Panel" para una configuración más centralizada y fácil de los ajustes del sistema.
+                                    AppleScript:
+                                    Introducción de AppleScript para la automatización de tareas y la creación de scripts personalizados para automatizar procesos repetitivos.
+                                    Compatibilidad con Nuevas Aplicaciones:
+                                    Mayor compatibilidad con una gama más amplia de aplicaciones de terceros y una mayor disponibilidad de software para el sistema.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    <img src="images/imagesMac/image6.png" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Mac OS 8</td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">8.0 (con actualizaciones posteriores como 8.1, 8.5, 8.6)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplicable (El concepto de kernel tal como se entiende hoy no estaba claramente definido; se basa en el kernel de Macintosh tradicional.)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1997</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Motorola 68040, PowerPC 601, PowerPC 603, PowerPC 604 (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">20 MHz, 25 MHz, 33 MHz, 40 MHz, o 60 MHz (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">32-bit (para modelos basados en PowerPC)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">SIMM (Single Inline Memory Module) y DIMM (Dual Inline Memory Module)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Macintosh PowerBook 3400: hasta 64 MB.
+                                    Macintosh Power Mac 9600: hasta 1 GB (con módulos adicionales y expansiones)
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">La RAM en ese período operaba a frecuencias de 60 MHz a 100 MHz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Compatibilidad con nuevos modelos de Macintosh:
+                                    Power Mac G3, PowerBook G3, iMac G3.
+                                    Mejor soporte para procesadores PowerPC:
+                                    Aprovechamiento de la arquitectura PowerPC para un mejor rendimiento y eficiencia en comparación con los procesadores Motorola 680x0.
+                                    Soporte para nuevas tecnologías de conectividad:
+                                    Mejora en el soporte para puertos USB y otros periféricos de hardware
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Interfaz Gráfica Modernizada:
+                                    Introducción del "Platinum" appearance, que modernizó la interfaz gráfica con una apariencia más pulida y moderna.
+                                    Mejoras en la Multitarea:
+                                    Avances en la gestión de la multitarea cooperativa y mejoras en la estabilidad del sistema.
+                                    Mejoras en el Finder:
+                                    Nuevas características en el Finder, incluyendo una mejor visualización y administración de archivos y carpetas.
+                                    Soporte para Extensiones y Controladores:
+                                    Expansión en el soporte para extensiones del sistema y controladores, facilitando la integración de hardware adicional y nuevas funcionalidades.
+                                    Características de Personalización:
+                                    Nuevas opciones para personalizar la apariencia y el comportamiento del sistema, incluyendo temas y configuraciones del escritorio.
+                                    Mejoras en la Administración de Memoria:
+                                    Optimización en el manejo de la memoria para aplicaciones más grandes y una mejor eficiencia general del sistema.
+                                    Integración con Internet:
+                                    Mejora en el soporte para conexiones de red e Internet, con una integración más fluida de aplicaciones de red y servicios en línea.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">    <!-- NO se pone flex justify content center por que se desborda -->
+                                    <img src="images/imagesMac/image7.png" class="" alt=""> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Mac OS 9</td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">9.0 (con actualizaciones posteriores como 9.1, 9.2, y 9.2.2)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Mac OS 9 no utiliza el núcleo XNU, ya que XNU es específico de las versiones de Mac OS X (desde Mac OS X 10.0 en adelante). En lugar de eso, Mac OS 9 se basa en una arquitectura completamente diferente, que es parte del sistema operativo clásico de Macintosh.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1999</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">PowerPC G3, PowerPC G4 (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">233 MHz, 266 MHz, 300 MHz, 350 MHz, 400 MHz, 500 MHz, 550 MHz (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">32-bit (para modelos PowerPC G3 y G4)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DIMM (Dual Inline Memory Module)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    iMac G3: hasta 256 MB
+                                    Power Mac G4: hasta 1.5 GB (en modelos con expansión máxima)
+                                    PowerBook G3: hasta 512 MB
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">La RAM en ese período operaba a frecuencias de 60 MHz a 100 MHz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Compatibilidad con nuevos modelos de Macintosh:
+                                    iMac G3, Power Mac G4, PowerBook G3, PowerBook G4.
+                                    Soporte para procesadores PowerPC G4:
+                                    Mejoras en el rendimiento con los procesadores PowerPC G4, incluyendo el uso de AltiVec (SSE) para procesamiento vectorial.
+                                    Mejoras en la conectividad:
+                                    Soporte para tecnologías emergentes como USB y FireWire.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Mejoras en la Multitarea:
+                                    Introducción del "Application Switcher" que facilitaba el cambio entre aplicaciones abiertas y mejoraba la experiencia de multitarea.
+                                    Mejoras en el Finder:
+                                    Nuevas características como el "Column View" (vista de columnas) para una mejor navegación y administración de archivos.
+                                    Soporte para Red y Conectividad:
+                                    Mejoras en el soporte para redes y servicios de Internet, incluyendo soporte para compartir archivos y conexiones de red más avanzadas.
+                                    Mejoras en la Administración de Archivos:
+                                    Introducción de características como el "Disk Copy" para una mejor gestión de discos y volúmenes.
+                                    Características de Personalización:
+                                    Mayor capacidad para personalizar el sistema con opciones mejoradas para la apariencia y la configuración del escritorio.
+                                    Soporte para AppleScript y Automatización:
+                                    Expansión en las capacidades de AppleScript para la automatización de tareas y la creación de scripts más complejos.
+                                    Introducción de Sherlock:
+                                    Una herramienta para la búsqueda de archivos en el sistema y en la web, proporcionando una experiencia de búsqueda más integrada.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">   <!-- NO se pone flex justify content center por que se desborda -->
+                                    <img src="images/imagesMac/image8.png" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Mac OS X 10.0 "Cheetah"</td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">10.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Versión del Kernel XNU: 4.0.1</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">2001</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">PowerPC G3, PowerPC G4, PowerPC G5 (aunque el soporte inicial fue principalmente para G3 y G4)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">233 MHz, 266 MHz, 300 MHz, 350 MHz, 400 MHz, 500 MHz, 550 MHz (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">32-bit (PowerPC G3 y G4)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DIMM (Dual Inline Memory Module)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Power Mac G4: hasta 1.5 GB
+                                    iMac G3: hasta 256 MB
+                                    PowerBook G4: hasta 512 MB
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">La RAM en ese período operaba a frecuencias de 60 MHz a 100 MHz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Compatibilidad con nuevos modelos de Macintosh:
+                                    Power Mac G4, iMac G3, PowerBook G4.
+                                    Soporte para arquitectura PowerPC:
+                                    Uso del procesador PowerPC para un mejor rendimiento en comparación con el hardware basado en Motorola 680x0.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Nuevo Núcleo y Arquitectura:
+                                    Introducción del núcleo XNU, que combina Mach y componentes de BSD, proporcionando una base sólida para el sistema operativo.
+                                    Interfaz Aqua:
+                                    Interfaz gráfica Aqua, con una apariencia moderna y características como ventanas translúcidas, efectos de transparencia, y una experiencia visual refrescante.
+                                    Compatibilidad con Aplicaciones:
+                                    Soporte limitado para aplicaciones antiguas de Mac OS clásico a través del "Classic Environment".
+                                    Sistema de Archivos:
+                                    Introducción del sistema de archivos HFS+ (Hierarchical File System Plus), que mejoró la gestión de archivos y directorios.
+                                    Multitarea:
+                                    Soporte para multitarea preemptiva, permitiendo una ejecución más eficiente de múltiples aplicaciones.
+                                    Nuevas Herramientas y Utilidades:
+                                    Introducción de herramientas y utilidades modernas como el Finder actualizado, Dock para el acceso rápido a aplicaciones, y nuevas utilidades de red y administración de archivos.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesMac/image9.png" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Mac OS X10.1 “Puma”</td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">10.1</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Versión del Kernel XNU: 5.2.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">2001</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">PowerPC G3, PowerPC G4</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">233 MHz, 266 MHz, 300 MHz, 350 MHz, 400 MHz, 500 MHz (dependiendo del modelo de Macintosh)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">32-bit (PowerPC G3 y G4)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DIMM (Dual Inline Memory Module)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Power Mac G4: hasta 1.5 GB
+                                    iMac G3: hasta 512 MB
+                                    PowerBook G4: hasta 1 GB
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">La RAM en ese período operaba a frecuencias de 60 MHz a 100 MHz.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Compatibilidad con nuevos modelos de Macintosh:
+                                    Power Mac G4, iMac G3, PowerBook G4.
+                                    Soporte mejorado para hardware existente:
+                                    Continuación del soporte para procesadores PowerPC G3 y G4, con mejoras en la compatibilidad y el rendimiento de hardware.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Soporte Ampliado para Aplicaciones:
+                                    Mejora en la compatibilidad con aplicaciones y el entorno Classic para ejecutar aplicaciones de Mac OS 9.
+                                    Introducción de Nuevas Aplicaciones y Herramientas:
+                                    Nuevas herramientas y utilidades para la administración del sistema y la conectividad, incluyendo mejoras en el acceso a redes y dispositivos periféricos.
+                                    Actualizaciones en la Documentación y Ayuda:
+                                    Mejora en la documentación en línea y el soporte de ayuda para facilitar la transición y el uso del nuevo sistema operativo.  
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesMac/image10.png" class="" alt="">
                                 </td>
                             </tr>
                         
@@ -166,68 +436,182 @@
                         </table>
                     
                 </div>
-            </div>
+            </div>            <!-- ******* WINDOWS *******-->
             <div id="windows-section" class="hidden">
                 <div class="border border-red-600 bg-slate-300 shadow-sm m-1 my-4 h-[600px] w-[1040px] rounded-xl overflow-scroll">
                     <h1 class="text-center my-5 text-xl font-serif font-bold">Linea de tiempo Windows</h1>
                         <table class="border-2  border-red-600 m-5 border-collapse table-auto w-full text-sm">
                         <thead class="bg-indigo-800">
                             <tr>
-                                <th class="border-b font-medium p-4 pl-8 pt-3 pb-3 text-slate-100 text-left ">Nombre</th>
-                                <th class="border-b font-medium p-4 pt-3 pb-3 text-slate-100 text-left">Version</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">version Kernel</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Año Lanzamiento</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Procesador</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Velocidad</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Arquitectura</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Numero de Hilos</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Tipo</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Capacidad</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Frecuencia (Velocidad)</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Novedades del Hardware</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Novedades del Software</th>
-                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-left">Foto Escritorio</th>
+                                <th class="border-b font-medium p-4 pl-8 pt-3 pb-3 text-slate-100 text-center ">Nombre</th>
+                                <th class="border-b font-medium p-4 pt-3 pb-3 text-slate-100 text-center">Version</th>
+                                <th class="border-b font-medium px-32 pt-3 pb-3 text-slate-100 text-center">Version Kernel</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Año Lanzamiento</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Procesador</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Velocidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Arquitectura</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Numero de Hilos</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Tipo</th>
+                                <th class="border-b font-medium px-32 pt-3 pb-3 text-slate-100 text-center">Capacidad</th>
+                                <th class="border-b font-medium p-4 pr-8 pt-3 pb-3 text-slate-100 text-center">Frecuencia (Velocidad)</th>  <!-- Aqui en el th es donde se organiza todo el grandon de los contenidos de la tabla con padding -->
+                                <th class="border-b font-medium px-52 pt-3 pb-3 text-slate-100 text-center">Novedades del Hardware</th>  <!-- Se le pone padding x 48 para que quede mas amplio para poner el texto -->
+                                <th class="border-b font-medium px-52 pt-3 pb-3 text-slate-100 text-center">Novedades del Software</th>  <!-- Se le pone padding x 48 para que quede mas amplio para poner el texto -->
+                                <th class="border-b font-medium px-48 pt-3 pb-3 text-slate-100 text-center">Foto Escritorio</th>         <!-- Se le pone padding x 48 para que quede mas amplio la imagen de escritorio -->
                             </tr>
                         </thead>
                         <tbody class="bg-white/80">
                             <tr>
-                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800">Windows 1.0 </td>
-                                <td class="border-b border-indigo-500 p-4 text-indigo-800">1.0</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No aplica</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1985</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Intel 8086 y 8088 </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">4.77 MHz</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">x86 de 16 bits</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 hilo </td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">DRAM</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">256 KB a 512 KB</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">4.77 MHz</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Requiere procesador x86, tarjeta gráfica básica, y disquete para instalación</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Interfaz gráfica básica sobre MS-DOS, multitarea cooperativa</td>
-                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">
-                                    <img src="images/win_1.png" class="" alt="">
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Windows 1.0 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">1.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1985</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Intel 8086 y 8088 </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">4.77 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">x86 de 16 bits</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DRAM</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">256 KB a 512 KB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">4.77 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Requiere procesador x86, tarjeta gráfica básica, y disquete para instalación</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Interfaz gráfica básica sobre MS-DOS, multitarea cooperativa</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesWindows/image1.png" class="" alt="">
                                 </td>
                             </tr>
                             <tr>
-                                <tr>
-                                    <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800">Windows 2.0 </td>
-                                    <td class="border-b border-indigo-500 p-4 text-indigo-800">2.0</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">No aplica</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1987</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Intel 80286 ( también compatible con 8088 y 8086)</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">4.77 MHz (8088) o 6-8 MHz (80286)</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">x86 de 16 bits</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">1 hilo </td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">DRAM</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">512 KB a 640 KB</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">4.77 MHz (8088), 6-8 MHz (80286)</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Windows 2.0 hizo uso de la arquitectura del procesador Intel 80286, que permitió una mejor administración de la memoria y una mayor capacidad de procesamiento en comparación con los procesadores anteriores. También mejoró la capacidad gráfica y soportó modos de pantalla más avanzados.</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">Introdujo mejoras significativas en la interfaz gráfica, como el uso de ventanas superpuestas (en lugar de las ventanas de mosaico de Windows 1.0), mejor administración de la memoria, y soporte para la ejecución de múltiples aplicaciones simultáneamente en un entorno gráfico. También se introdujeron mejoras en el manejo de gráficos y la capacidad de usar iconos más sofisticados.</td>
-                                    <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800">
-                                        <img src="images/win_2.png" class="" alt="">
-                                    </td>
-                                </tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Windows 2.0 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">2.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">No aplica</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1987</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Intel 80286 ( también compatible con 8088 y 8086)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">4.77 MHz (8088) o 6-8 MHz (80286)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">x86 de 16 bits</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DRAM</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">512 KB a 640 KB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">4.77 MHz (8088), 6-8 MHz (80286)</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Windows 2.0 hizo uso de la arquitectura del procesador Intel 80286, que permitió una mejor administración de la memoria y una mayor capacidad de procesamiento en comparación con los procesadores anteriores. También mejoró la capacidad gráfica y soportó modos de pantalla más avanzados.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Introdujo mejoras significativas en la interfaz gráfica, como el uso de ventanas superpuestas (en lugar de las ventanas de mosaico de Windows 1.0), mejor administración de la memoria, y soporte para la ejecución de múltiples aplicaciones simultáneamente en un entorno gráfico. También se introdujeron mejoras en el manejo de gráficos y la capacidad de usar iconos más sofisticados.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesWindows/image2.png" class="" alt="">
+                                </td>
                             </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Windows 3.0 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">3.0</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Sigue sin version Kernel.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1990</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Intel 80286/80386</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">12-20 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">x86 de 16 bits</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DRAM</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">640 KB a 4 MB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8-12 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Windows 3.0 se benefició de una mayor capacidad de los procesadores Intel 80286, 
+                                    que permitió una gestión más eficiente de la memoria. También fue uno de los primeros 
+                                    sistemas en soportar gráficos VGA (Video Graphics Array), proporcionando una mejor calidad de 
+                                    imagen y una interfaz gráfica más avanzada.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Windows 3.0 introdujo una interfaz gráfica de usuario más avanzada y amigable, con ventanas que 
+                                    podían superponerse y una mayor capacidad para manejar múltiples tareas simultáneamente en el entorno gráfico.
+                                    Se mejoró el sistema de gestión de memoria y se introdujo la capacidad de usar una "capa de protección de
+                                    memoria" que permitió una mayor estabilidad y multitarea. También incluía un administrador de programas mejorado,
+                                    el "Programa Manager," y soporte para aplicaciones en modo de 16 bits, mejorando significativamente la experiencia del 
+                                    usuario en comparación con las versiones anteriores.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesWindows/image3.png" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Windows 3.1 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">3.1</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Sigue sin version Kernel.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1992</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Intel 80386 (Compatible 80286 )</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">12-33 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">x86 de 16 bits</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DRAM</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">640 KB a 4 MB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8-12 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Windows 3.1 ofreció soporte mejorado para gráficos, incluyendo la compatibilidad con el estándar VGA y mejoras 
+                                    en el manejo de la memoria. La compatibilidad con el procesador Intel 80386 permitió un uso más eficiente del modo 
+                                    protegido y la gestión de la memoria virtual.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Multitarea mejorada: Implementó un mejor sistema de multitarea cooperativa, permitiendo que las aplicaciones se ejecutaran de manera más eficiente en el entorno gráfico.
+                                    Administrador de programas: Se introdujo el "Program Manager," que mejoró la organización y el acceso a las aplicaciones.
+                                    Compatibilidad y estabilidad: Mejoras en la estabilidad del sistema y la compatibilidad con una mayor variedad de hardware y software, además de soporte para aplicaciones en modo protegido con el procesador 80386.
+                                    Soporte para redes: Introducción de soporte básico para redes, permitiendo una mayor conectividad en entornos de red.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesWindows/image4.png" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Windows for Workgroups 3.11 </td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">3.11</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Sigue sin version Kernel.</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1993</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Intel 80386 - Intel 80486</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">20-100 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">x86 de 16/32 bits</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">DRAM</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 MB a 16MB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8-12 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Windows 3.11 se benefició de los avances en hardware de la época, incluyendo procesadores más 
+                                    rápidos como el Intel 80486 y mejoras en la capacidad de memoria y gráficos. Aunque no introdujo
+                                    nuevas características de hardware directamente, ofreció mejor compatibilidad y soporte para el 
+                                    hardware existente.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Redes y conectividad: Incorporó soporte mejorado para redes, permitiendo compartir archivos e impresoras en entornos de red con más facilidad. Se integró un soporte más 
+                                    robusto para redes basadas en TCP/IP y NetBEUI, así como una administración de red más avanzada.
+                                    Estabilidad y rendimiento: Mejoró la estabilidad del sistema y el rendimiento general con optimizaciones en el manejo de memoria y la gestión de aplicaciones.
+                                    Interfaz de usuario: Aunque no hubo cambios radicales en la interfaz de usuario respecto a Windows 3.1, Windows 3.11 ofreció un entorno más pulido y estable.
+                                    Soporte para aplicaciones: Mejoró la compatibilidad con una mayor variedad de aplicaciones y dispositivos, y ofreció una plataforma más robusta para software de red y aplicaciones empresariales.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesWindows/image5.jpg" class="" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b border-indigo-500 p-4 pl-8 text-indigo-800 text-center">Windows 95</td>
+                                <td class="border-b border-indigo-500 p-4 text-indigo-800 text-center">95</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">4.00.950 (o simplemente 4.0) - Con dependencia del MS-DOS</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1995</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Intel 80486/Intel Pentium</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">Intel 80486: 20-100 MHz - Intel Pentium: 60-200MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">x86 de 32 bits</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">1 hilo </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">SDRAM</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">4 MB a 16 MB</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">8-12 MHz</td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Plug and Play: Introdujo el soporte para "Plug and Play" (PnP), que permitía la detección automática de hardware y simplificaba la instalación de nuevos dispositivos.
+                                    Compatibilidad con el hardware: Mejoró el soporte para una amplia gama de hardware, incluyendo impresoras, módems y tarjetas de video, facilitando su configuración y uso.
+                                    Soporte para redes: Integró soporte mejorado para redes locales (LAN) y conexiones a internet, lo que facilitó la conectividad en redes y la navegación por la web.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center">
+                                    Interfaz de usuario: Introdujo una interfaz gráfica de usuario completamente nueva, con el menú de inicio, la barra de tareas y el área de notificación, que se convirtieron en elementos clave de la experiencia de usuario en Windows.
+                                    Multitarea: Ofreció soporte para multitarea preemptiva, lo que mejoró la capacidad del sistema para ejecutar múltiples aplicaciones simultáneamente de manera más eficiente.
+                                    Sistema de archivos: Incluyó el sistema de archivos FAT32, que permitió la gestión de discos duros de mayor capacidad y mejoró el rendimiento del sistema de archivos.
+                                    Soporte para 32 bits: Introdujo soporte nativo para aplicaciones de 32 bits y un entorno operativo de 32 bits, proporcionando un mejor rendimiento y estabilidad en comparación con versiones anteriores.
+                                    Integración con la red: Incluyó herramientas integradas para el acceso a redes y recursos compartidos, y mejoró la capacidad de conexión a internet con el Internet Explorer 1.0.
+                                </td>
+                                <td class="border-b border-indigo-500 p-4 pr-8 text-indigo-800 text-center flex justify-center">
+                                    <img src="images/imagesWindows/image6.png" class="" alt="">
+                                </td>
+                            </tr>
+
+                            
             
                         </tbody>
                         </table>
