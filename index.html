@@ -16,31 +16,40 @@
     </head>
     <body>
         <header class="bg-slate-300 border border-red-700 h-[130px] flex justify-between items-center px-4">
-            <button id="menu-toggle" class="p-2 border rounded">
+            <button id="menu-toggle" class="mx-14 p-2 border rounded">
                 <span class="block w-6 h-1 bg-black mb-1"></span>
                 <span class="block w-6 h-1 bg-black mb-1"></span>
                 <span class="block w-6 h-1 bg-black"></span>
             </button>
-            <h1 class="relative text-2xl font-serif font-bold">Linea de tiempo MAC y windows</h1>
+            <h1 class=" text-2xl font-serif font-bold">Linea de tiempo MAC Y WINDOWS</h1>
             <div class="flex items-center">
-                <img src="images/Logo_Jeferson.png" class="border border-red-700 h-10"  alt="">
-                <img src="images/foto_jefer.png" class="rounded-full border-red-700 bg-slate-600 border h-32 ml-4"   alt="">
+                <img src="images/Logo_Jeferson.png" class="border border-red-700 h-8"  alt="">
+                <img src="images/foto_jefer.png" class="rounded-full bg-slate-600 border-4 h-32 w-32 ml-4 object-contain" alt="">
             </div>
             <button id="menu-button" class="md:hidden text-2xl">
                 &#9776; <!-- Símbolo de hamburguesa -->
             </button>
         </header>
-        <section id="content" class="p-4 border border-red-700 h-[900px] bg-slate-700 flex flex-wrap">
-            <div id="menu" class="menu-hidden border border-red-600 bg-slate-300 m-1 h-[600px] w-[250px]">
-                <nav id="menu" class="fixed top-0 left-0 w-full h-full bg-slate-300 border-r border-red-700 transform -translate-x-full md:translate-x-0 md:relative md:bg-transparent md:border-none transition-transform duration-300">
+        <section id="content" class="p-4 border border-red-700 h-auto bg-slate-700 flex flex-wrap">
+            <div id="menu" class="menu-hidden border border-red-600 bg-slate-300 m-1 h-[600px] w-[250px] rounded-xl m-auto">
+                <nav id="menu" class="border border-red-700">
                     <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
-                    <ul class="mt-16 space-y-4 text-center md:mt-0 md:flex md:space-y-0 md:space-x-4">
-                        <li><a href="#" id="mac-link">Mac</a></li>
-                        <li><a href="#" id="windows-link">Windows</a></li>
-                    </ul>
+                    
+                        <li class="mx-5 mt-5">
+                            <a href="#" id="mac-link" class="mx-5 font-serif font-semibold text-lg"> 
+                                Mac
+                                <img src="images/icon_mac.png" class="border mx-12 mt-5 h-24" alt="">
+                            </a>
+                        </li>
+                        <li class="mx-5 mt-5">
+                            <a href="#" id="windows-link" class="mx-5 font-serif font-semibold text-lg" >
+                                Windows
+                                <img src="images/icon_windows.png" class="border mx-12 mt-5 h-24" alt="">
+                            </a>
+                        </li>
                 </nav>
             </div>
-            <div id="mac-section" class="hidden"> 
+            <div id="mac-section" class="hidden m-auto"> 
                 <div class="border border-red-600 bg-slate-300 m-1 h-[600px] w-[1040px] rounded-xl overflow-auto">
                     <h1 class="text-center my-5 text-xl font-serif font-bold">Linea de tiempo Apple Mac</h1>
                     <div class="border-2  shadow-sm overflow-auto my-4">
