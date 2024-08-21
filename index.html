@@ -43,6 +43,10 @@
             <div id="menu" class="menu-hidden bg-slate-300 h-[800px] w-[250px] rounded-xl m-auto">      <!-- En px: h-[600px] w-[250px] -->
                 <nav id="menu" class="flex flex-col justify-center">
                     <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
+                    <a href="#" id="history-link" class="hidden mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
+                        Historia
+                        <img src="images/icon_mac.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
+                    </a>  
                     <a href="#" id="mac-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
                         Mac
                         <img src="images/icon_mac.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
@@ -52,6 +56,18 @@
                         <img src="images/icon_windows.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
                     </a>    
                 </nav>
+            </div>
+            <div id="history-section" class="hidden m-auto">
+                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-scroll">
+                    <h1 class="text-center my-5 text-xl font-serif font-bold">Esta es la historia</h1>
+                    <p>
+                        Esto es un texto
+
+
+                    </p>
+
+
+                </div>
             </div>
             <div id="mac-section" class="hidden m-auto"> 
                 <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-scroll">  <!-- En px: h-[600px] w-[1040px] -->
@@ -1869,6 +1885,7 @@
             const menuButton = document.getElementById('menu-button');
             const closeButton = document.getElementById('close-button');
             const menu = document.getElementById('menu');
+            const historyLink = document.getElementById('history-link');  //Se declara la variable con el id de history-link
             const macLink = document.getElementById('mac-link');
             const windowsLink = document.getElementById('windows-link');
             const macSection = document.getElementById('mac-section');
@@ -1880,6 +1897,13 @@
 
             closeButton.addEventListener('click', () => {
                 menu.classList.add('-translate-x-full');
+            });
+            
+            historyLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                historyLink.classList.remove('hidden');   //Se agrega este nuevo.
+                macSection.classList.add('hidden');
+                windowsSection.classList.add('hidden');
             });
 
             macLink.addEventListener('click', (e) => {
