@@ -24,8 +24,8 @@
             </button>
             <h1 class=" text-2xl font-serif font-bold">Linea de tiempo MAC Y WINDOWS</h1>
             <div class="flex items-center">
-                <img src="images/Logo_Jeferson.png" class="h-8"  alt=""> <!-- border border-red-700 -->
-                <img src="images/foto_jefer.png" class="rounded-full bg-slate-600 border-4 border-blue-800 h-32 w-32 ml-4 object-contain" alt="">
+                <img src="images/Logo_Jeferson.png" class="h-8 hover:h-9 transition-all duration-700"  alt=""> <!-- border border-red-700 -->
+                <img src="images/foto_jefer.png" class="mx-3 rounded-full bg-slate-600 border-4 border-blue-800 h-24 w-24 ml-4 object-contain hover:h-28 hover:w-28 transition-all duration-1000" alt="">
             </div>
             <button id="menu-button" class="md:hidden text-2xl">
                 &#9776; <!-- Símbolo de hamburguesa -->
@@ -33,21 +33,16 @@
         </header>
         <section id="content" class="p-4 h-auto bg-slate-700 flex">  <!-- Solo con display flex se organizan en filas horizontalmente -->
             <div id="menu" class="menu-hidden bg-slate-300 h-[600px] w-[250px] rounded-xl m-auto">
-                <nav id="menu" class="">
+                <nav id="menu" class="flex flex-col justify-center">
                     <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
-                    
-                        <li class="mx-5 mt-5">
-                            <a href="#" id="mac-link" class="mx-5 font-serif font-semibold text-lg hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
-                                Mac
-                                <img src="images/icon_mac.png" class=" mx-12 mt-5 h-24 hover:h-28 transition-all duration-300" alt="">
-                            </a>
-                        </li>
-                        <li class="mx-5 mt-5">
-                            <a href="#" id="windows-link" class="mx-5 font-serif font-semibold text-lg hover:text-2xl transition-all duration-300" >
-                                Windows
-                                <img src="images/icon_windows.png" class=" mx-12 mt-5 h-24 hover:h-28 transition-all duration-300" alt="">
-                            </a>
-                        </li>
+                    <a href="#" id="mac-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
+                        Mac
+                        <img src="images/icon_mac.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
+                    </a>            
+                    <a href="#" id="windows-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300" >
+                        Windows
+                        <img src="images/icon_windows.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
+                    </a>    
                 </nav>
             </div>
             <div id="mac-section" class="hidden m-auto"> 
@@ -1842,10 +1837,10 @@
             </div>
         </section>
         <footer class="border bg-slate-300 h-[300px]  text-center">   <!-- border border-red-700 -->
-            <img src="images/Logo_Jeferson.png" class="mx-auto h-10 mb-4 my-8" alt="">
+            <img src="images/Logo_Jeferson.png" class="mx-auto h-10 mb-4 my-8 hover:h-11 transition-all duration-700" alt="">
             <p class="relative text-black text-lg tracking-widest font-serif font-normal text-center">Jeferson Mauricio Hernandez Ladino</p>
             <p class="text-black text-sm tracking-widest font-serif font-normal text-center">ADSO - 14/08/2024</p>
-            <img src="images/Logos-Redes.png" class="mx-auto h-9 mt-5" alt="">
+            <img src="images/Logos-Redes.png" class="mx-auto h-9 mt-5 hover:h-10 transition-all duration-700" alt="">
             <p class="relative top-8 text-black font-serif font-normal text-center">Derechos Reservados &copy; 2024</p>
 
         </footer>
