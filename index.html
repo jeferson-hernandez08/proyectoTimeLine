@@ -13,6 +13,11 @@
             .menu-hidden {
                 display: none;
             }
+
+            body {
+                overflow-x: hidden;
+            }
+
         </style>
     </head>
     <body>
@@ -34,7 +39,7 @@
                 &#9776; <!-- Símbolo de hamburguesa -->
             </button>
         </header>
-        <section id="content" class="p-4 h-auto bg-slate-700 flex">  <!-- Solo con display flex se organizan en filas horizontalmente --> <!-- No me deja cuadrar porcentajes por el flex -->
+        <section id="content" class="content p-4 h-auto bg-slate-700 flex">  <!-- Solo con display flex se organizan en filas horizontalmente --> <!-- No me deja cuadrar porcentajes por el flex -->
             <div id="menu" class="menu-hidden bg-slate-300 h-[800px] w-[250px] rounded-xl m-auto">      <!-- En px: h-[600px] w-[250px] -->
                 <nav id="menu" class="flex flex-col justify-center">
                     <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
@@ -1843,7 +1848,20 @@
             <img src="images/Logo_Jeferson.png" class="mx-auto h-10 mb-4 my-8 hover:h-11 transition-all duration-700" alt="">
             <p class="relative text-black text-lg tracking-widest font-serif font-normal text-center">Jeferson Mauricio Hernandez Ladino</p>
             <p class="text-black text-sm tracking-widest font-serif font-normal text-center">ADSO - 14/08/2024</p>
-            <img src="images/Logos-Redes.png" class="mx-auto h-9 mt-5 hover:h-10 transition-all duration-700" alt="">
+            <div class="flex justify-center align-items-center">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/imagesRedes/logo_facebook.png" class="mx-2 h-9 mt-5 hover:h-11 transition-all duration-300" alt="">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/imagesRedes/logo_instagram.png" class="mx-2 h-9 mt-5 hover:h-11 transition-all duration-300" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/jeferson-mauricio-hernandez-ladino-35001b257/" target="_blank">
+                    <img src="images/imagesRedes/logo_linkedin.png" class="mx-2 h-9 mt-5 hover:h-11 transition-all duration-300" alt="">
+                </a>
+                <a href="https://github.com/jeferson-hernandez08" target="_blank">
+                    <img src="images/imagesRedes/logo_github.png" class="mx-2 h-9 mt-5 hover:h-11 transition-all duration-300" alt="">
+                </a>
+            </div>
             <p class="relative top-8 text-black font-serif font-normal text-center">Derechos Reservados &copy; 2024</p>
 
         </footer>
