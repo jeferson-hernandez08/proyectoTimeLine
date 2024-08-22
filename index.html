@@ -43,32 +43,67 @@
             <div id="menu" class="menu-hidden bg-slate-300 h-[800px] w-[250px] rounded-xl m-auto">      <!-- En px: h-[600px] w-[250px] -->
                 <nav id="menu" class="flex flex-col justify-center">
                     <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
-                    <a href="#" id="history-link" class="hidden mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
+                    <a href="#" id="history-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
                         Historia
-                        <img src="images/icon_mac.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
+                        <img src="images/apple_windows.png" class="mx-9 mt-0 h-24 hover:h-28 transition-all duration-300" alt="">
                     </a>  
                     <a href="#" id="mac-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
                         Mac
-                        <img src="images/icon_mac.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
+                        <img src="images/icon_mac.png" class="mx-14 mt-2 h-20 hover:h-24 transition-all duration-300" alt="">
                     </a>            
                     <a href="#" id="windows-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300" >
                         Windows
-                        <img src="images/icon_windows.png" class="mx-14 mt-5 h-20 hover:h-24 transition-all duration-300" alt="">
+                        <img src="images/icon_windows.png" class="mx-14 mt-2 h-20 hover:h-24 transition-all duration-300" alt="">
                     </a>    
                 </nav>
-            </div>
+            </div>            <!-- ******* HISTORY *******-->
             <div id="history-section" class="hidden m-auto">
-                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-scroll">
+                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-auto">
                     <h1 class="text-center my-5 text-xl font-serif font-bold">Esta es la historia</h1>
-                    <p>
-                        Esto es un texto
-
-
-                    </p>
-
-
+                    <div class="flex">
+                        <div class="relative rounded-xl overflow-auto">
+                            <div class="px-4">  <!-- Este padding en x me esta dando margen -->
+                                <div class="max-w-lg mx-auto h-[700px] overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover shadow-lg" style="background-image:url('https://statics.forbesargentina.com/2023/02/63dbe9fd9adb1.jpg'); background-position: center -80px;">
+                                    <div class="mt-40">
+                                        <div class="bg-white p-4 sm:p-8">
+                                        <div class="font-inter font-extrabold text-2xl text-black tracking-tight">Apple inc</div>
+                                        <div class="mt-1 font-medium text-sm text-slate-500">Abril 1, 1976 - Apple inc</div>
+                                        <p class="mt-4 leading-7 text-slate-500">
+                                            Apple es una multinacional que desarrolla y vende productos electrónicos de consumo y software informativo. 
+                                            Fue fundada el 1 de abril de 1976 por Steve Jobs, Steve Wozniak y Ronald Wayne para comercializar el primer ordenador de Wozniak, el Apple I. En ese entonces se conoció como Apple Computer Co. El 3 de enero de 1977 se constituyó oficialmente la empresa en California.
+                                        </p>
+                                        <p class="mt-4 leading-7 text-slate-500">
+                                            En 1987, fue registrado el dominio 'Apple.com' lo que la convirtió en una de las 20 primeras empresas en incursionar aún más en internet. Por esos mismos años, también competía con la computadora de IBM.
+                                            Apple Computer produjo inicialmente ordenadores personales durante más de tres décadas, que incluían líneas como el Apple II, Macintosh y Power Mac. Sin embargo, durante la década de 1990, las ventas fueron difíciles y la participación en el mercado no era grande. Jobs, que había salido de la empresa en 1985, regresó en 1997 después de que Apple comprara la empresa que había creado en ese tiempo.
+                                        </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative rounded-xl overflow-auto">
+                            <div class="px-4">
+                                <div class="max-w-lg mx-auto h-[700px] overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover shadow-lg" style="background-image:url('https://pbs.twimg.com/media/Fs5Cy61XsAIENxB.jpg:large'); background-position: center -80px;">
+                                <div class="mt-40">
+                                    <div class="bg-white p-4 sm:p-8">
+                                    <div class="font-inter font-extrabold text-2xl text-black tracking-tight">Microsoft</div>
+                                    <div class="mt-1 font-medium text-sm text-slate-500">Abril 4, 1975 - Microsoft</div>
+                                    <p class="mt-4 leading-7 text-slate-500">
+                                        Windows es un sistema operativo desarrollado por la compañía Microsoft. Consiste en un software conformado por un conjunto de programas.
+                                        En 1975 Bill Gates y Paul Allen fundaron la compañía Microsoft en Estados Unidos, con el objetivo de desarrollar y comercializar programas para ejecutar el Altair 8800, un microordenador diseñado en 1974. Gates y Allen desarrollaron el primer lenguaje de programación para el Altair Basic.
+                                    </p>
+                                    <p class="mt-4 leading-7 text-slate-500">
+                                        En 1979 Microsoft lanzó al público el primer sistema operativo llamado Xenix, que resulta obsoleto en la actualidad. En 1981 creó un nuevo sistema operativo que le permitió alcanzar el éxito, el DOS (de la sigla en inglés Disk Operative System que significa Sistema operativo de disco).
+                                        En 1985 se lanzó la primera versión del actualmente conocido sistema operativo Windows. Tiempo más tarde, en 1989, apareció otro producto que también continúa vigente en la actualidad y que funciona junto con la interfaz de Windows: el paquete informático Microsoft Office, que consiste en un conjunto de aplicaciones integradas, como el Microsoft Word o el Microsoft Excel.
+                                    </p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div>              <!-- ******* MAC APPLE *******-->
             <div id="mac-section" class="hidden m-auto"> 
                 <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-scroll">  <!-- En px: h-[600px] w-[1040px] -->
                     <h1 class="text-center my-5 text-xl font-serif font-bold">Linea de tiempo Apple Mac</h1>
@@ -1888,6 +1923,7 @@
             const historyLink = document.getElementById('history-link');  //Se declara la variable con el id de history-link
             const macLink = document.getElementById('mac-link');
             const windowsLink = document.getElementById('windows-link');
+            const historySection = document.getElementById('history-section');   //Se declara la variable con el id de history-section
             const macSection = document.getElementById('mac-section');
             const windowsSection = document.getElementById('windows-section');
 
@@ -1899,9 +1935,9 @@
                 menu.classList.add('-translate-x-full');
             });
             
-            historyLink.addEventListener('click', (e) => {
+            historyLink.addEventListener('click', (e) => {   //Se agrega este nuevo.
                 e.preventDefault();
-                historyLink.classList.remove('hidden');   //Se agrega este nuevo.
+                historySection.classList.remove('hidden');   //Al dar click muestrame la sesscion history y ocultame las demas (mac, windows)
                 macSection.classList.add('hidden');
                 windowsSection.classList.add('hidden');
             });
@@ -1910,16 +1946,19 @@
                 e.preventDefault();
                 macSection.classList.remove('hidden');   //Se usa js con el hidden
                 windowsSection.classList.add('hidden');
+                historySection.classList.add('hidden');
             });
 
             windowsLink.addEventListener('click', (e) => {
                 e.preventDefault();
                 windowsSection.classList.remove('hidden');
+                historySection.classList.add('hidden');
                 macSection.classList.add('hidden');
             });
 
-            // Inicialmente muestra la sección de Mac
-            macSection.classList.remove('hidden');
+            //Inicialmente muestra la sección de Historia
+            historySection.classList.remove('hidden');
+            macSection.classList.add('hidden');
             windowsSection.classList.add('hidden');
             
             //Para ocultar section del div
