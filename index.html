@@ -40,30 +40,30 @@
             </button>
         </header>
         <section id="content" class="content p-4 h-auto bg-slate-700 flex">  <!-- Solo con display flex se organizan en filas horizontalmente --> <!-- No me deja cuadrar porcentajes por el flex -->
-            <div id="menu" class="menu-hidden bg-slate-300 h-[800px] w-[250px] rounded-xl m-auto">      <!-- En px: h-[600px] w-[250px] -->
+            <div id="menu" class="menu-hidden bg-slate-300 h-[800px] w-[250px] rounded-xl m-auto mr-2">      <!-- En px: h-[600px] w-[250px] -->
                 <nav id="menu" class="flex flex-col justify-center">
                     <button id="close-button" class="absolute top-4 right-4 text-2xl md:hidden">&times;</button>
-                    <a href="#" id="history-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
+                    <a href="#" id="history-link" class="mx-5 my-2 mt-5 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
                         Historia
-                        <img src="images/apple_windows.png" class="mx-9 mt-0 h-24 hover:h-28 transition-all duration-300" alt="">
+                        <img src="images/apple_windows.png" class="mx-3 mt-0 h-24 hover:h-28 transition-all duration-300" alt="">
                     </a>  
                     <a href="#" id="mac-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300">  <!-- hover: nos permite engrandecer mas el tiempo 300 -->
                         Mac
-                        <img src="images/icon_mac.png" class="mx-14 mt-2 h-20 hover:h-24 transition-all duration-300" alt="">
+                        <img src="images/icon_mac.png" class="mx-9 mt-2 h-20 hover:h-24 transition-all duration-300" alt="">
                     </a>            
                     <a href="#" id="windows-link" class="mx-5 my-2 border-4 border-blue-900 bg-slate-700 rounded-lg p-1 text-center font-serif font-semibold text-xl hover:text-2xl transition-all duration-300" >
                         Windows
-                        <img src="images/icon_windows.png" class="mx-14 mt-2 h-20 hover:h-24 transition-all duration-300" alt="">
+                        <img src="images/icon_windows.png" class="mx-9 mt-2 h-20 hover:h-24 transition-all duration-300" alt="">
                     </a>    
                 </nav>
             </div>            <!-- ******* HISTORY *******-->
-            <div id="history-section" class="hidden m-auto">
-                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-auto">
+            <div id="history-section" class="hidden m-auto w-[100%]"> <!-- Ofac: Aqui es donde se le daba el ancho del 100%.-->
+                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-full rounded-xl overflow-auto">  <!-- width: full Ofac-->
                     <h1 class="text-center my-5 text-xl font-serif font-bold">Esta es la historia</h1>
                     <div class="flex">
-                        <div class="relative rounded-xl overflow-auto">
+                        <div class="relative rounded-xl overflow-auto w-[50%]">  <!-- width: 50% Ofac-->
                             <div class="px-4">  <!-- Este padding en x me esta dando margen -->
-                                <div class="max-w-lg mx-auto h-[700px] overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover shadow-lg" style="background-image:url('https://statics.forbesargentina.com/2023/02/63dbe9fd9adb1.jpg'); background-position: center -80px;">
+                                <div class="b-red-800 max-w-lg mx-auto h-[700px] overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover shadow-lg" style="background-image:url('https://statics.forbesargentina.com/2023/02/63dbe9fd9adb1.jpg'); background-position: center -80px;">
                                     <div class="mt-40">
                                         <div class="bg-white p-4 sm:p-8">
                                         <div class="font-inter font-extrabold text-2xl text-black tracking-tight">Apple inc</div>
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="relative rounded-xl overflow-auto">
+                        <div class="relative rounded-xl overflow-auto w-[50%]">  <!-- width: 50% Ofac-->
                             <div class="px-4">
                                 <div class="max-w-lg mx-auto h-[700px] overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover shadow-lg" style="background-image:url('https://pbs.twimg.com/media/Fs5Cy61XsAIENxB.jpg:large'); background-position: center -80px;">
                                 <div class="mt-40">
@@ -105,7 +105,7 @@
                 </div>
             </div>              <!-- ******* MAC APPLE *******-->
             <div id="mac-section" class="hidden m-auto"> 
-                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-scroll">  <!-- En px: h-[600px] w-[1040px] -->
+                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1090px] rounded-xl overflow-scroll">  <!-- En px: h-[600px] w-[1040px] -->
                     <h1 class="text-center my-5 text-xl font-serif font-bold">Linea de tiempo Apple Mac</h1>
                         <table class="m-5 border-collapse table-auto w-full text-sm">
                         <thead class="bg-indigo-800">
@@ -1418,7 +1418,7 @@
                 </div>
             </div>            <!-- ******* WINDOWS *******-->
             <div id="windows-section" class="hidden m-auto">
-                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1040px] rounded-xl overflow-scroll">
+                <div class="bg-slate-300 shadow-sm m-1 my-4 h-[800px] w-[1090px] rounded-xl overflow-scroll">
                     <h1 class="text-center my-5 text-xl font-serif font-bold">Linea de tiempo Windows</h1>
                         <table class="m-5 border-collapse table-auto w-full text-sm">
                         <thead class="bg-indigo-800">
